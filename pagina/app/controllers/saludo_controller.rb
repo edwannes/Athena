@@ -1,0 +1,2 @@
+class SaludoController < ApplicationController
+end

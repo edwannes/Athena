@@ -1,0 +1,9 @@
+<h1> Saludo#index</h1>
+<% ["Juan","Daniela","Laura","Prrro"].each do |persona| %>
+
+<% if persona == "Daniela" %>
+	<p style="<%="color:darkgreen"%>" > - Aunque me dueeeela... dejaré a <%= persona %>♪♫</p>
+<% else %>
+	<p> - Hola <%= persona %> </p>
+<%end%>
+<%end%>
