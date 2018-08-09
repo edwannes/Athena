@@ -9,10 +9,9 @@
 
 ### Sororidad:
 
-> [Sororidad](https://www.significados.com/sororidad/) es un neologismo que se emplea para referirse a la solidaridad entre mujeres en un > contexto de discriminación sexual y patriarcado.
+> [Sororidad](https://www.significados.com/sororidad/) es un neologismo que se emplea para referirse a la solidaridad entre mujeres en un contexto de discriminación sexual y patriarcado.
 
 
 
 
-I think you should use an
-`<addr>` element here instead.
+
