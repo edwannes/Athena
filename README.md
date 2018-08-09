@@ -20,3 +20,6 @@
 - [ ] Apicación móvil ATHENA
 
 
+### Actividad Agosto 8 de 2018
+
+En estos momentos @ferneyamp está trabajando en la web del producto :clap:
