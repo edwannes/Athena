@@ -1,4 +1,4 @@
-# ATHENA
+# ATHENA: RED DE APOYO CONTRA EL MALTRATO
 
 ![Athena_Logo](https://github.com/edwannes/Athena/blob/master/unnamed.png)
 
@@ -19,7 +19,7 @@
 - [ ] Back end del producto
 - [ ] Apicación móvil ATHENA
 
-- **Actividades
+- ### Actividades
 
   - La entrega del Prototipo inicial con mockups en el link https://github.com/edwannes/Athena/releases/tag/v0.1
 
