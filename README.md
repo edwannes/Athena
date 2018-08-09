@@ -19,7 +19,10 @@
 - [ ] Back end del producto
 - [ ] Apicación móvil ATHENA
 
+- **Actividades
 
-### Actividad Agosto 8 de 2018
+  - La entrega del Prototipo inicial con mockups en el link https://github.com/edwannes/Athena/releases/tag/v0.1
 
-En estos momentos @ferneyamp está trabajando en la web del producto :clap:
+  - Actividad Agosto 8 de 2018
+
+      En estos momentos @ferneyamp está trabajando en la web del producto :clap:
