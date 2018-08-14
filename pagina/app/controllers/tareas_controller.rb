@@ -1,16 +1,18 @@
 class TareasController < ApplicationController
+	before_action :authenticate_usuario!, except: [:show, :index]
+	before_action :set_tarea, except: [:index,:new ,:create]
 	def index
 		@tareas=Tarea.all
 	end
 	
-	def show
-		@tarea=Tarea.find(params[:id])
+	def show	
+		@comentario=comentario.new
 	end
 	def new
 		@tarea=Tarea.new
 	end
 	def create
-		@tarea= Tarea.new(tarea_params)
+		@tarea= current_usuario.tareas.new(tarea_params)
 		if @tarea.save
 			redirect_to @tarea
 		else
@@ -18,22 +20,24 @@ class TareasController < ApplicationController
 		end
 	end
 	def destroy
-		@tarea=Tarea.find(params[:id])
 		@tarea.destroy
 		redirect_to tareas_path
 	end
 	def edit
-		@tarea=Tarea.find(params[:id])
+		
 	end
-	def update
-		@tarea=Tarea.find(params[:id])
+	def update	
 		if @tarea.update(tarea_params)
 			render:edit
 		end
 	end
-	
 	private
 		def tarea_params
 			params.require(:tarea).permit(:titulo,:descripcion)
 		end
+
+	def set_tarea 
+			@tarea=Tarea.find(params[:id])
+		
+	end
 end

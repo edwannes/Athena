@@ -1,35 +1,45 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Pagina</title>
+    <title>ATHENA</title>
     <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+      <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   </head>
-
-  <body>
-	<nav class="navbar navbar-dark bg-dark">
-		<a class="navbar-brand" href="#">tareas</a>
+  <nav class="navbar navbar-dark bg-dark justify-content-center">
+		<ul class="nav justify-content-center p-3 mb-2 bg-dark text-white">
 		<% if usuario_signed_in? %>
-		<li class= "nav-item active">
-		<%= link_to "Cerrar sesión", destroy_usuario_session_path, method: :delete ,class: "nav-link"%>
-		</link>
-		
-		<%else%>
+		  <li class="nav-item">
+		    <%= link_to "Cerrar sesión", destroy_usuario_session_path, method: :delete ,class: "nav-link active"%>
+		  </li>
+		   <li class=" nav-item dropdown">
+		 	 <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Tareas</a>
+		  <%else%>
 			<%= link_to "iniciar sesión", new_usuario_session_path,class: "nav-link"%> |
 			<%= link_to "registrarse", new_usuario_registration_path,class: "nav-link"%>
-		</li>
-		<% end %>
 		
-	</nav>
+		<% end %>
+ 
+	   </li>
+  
+  </ul>
+</nav>
+  <body>
+	
 	<div class="container-fluid">
 		<p> <%= notice %> </p>
 		<p> <%= alert %> </p>
     <%= yield %>
 	</div>
-	<footer class = "fixed-bottom text-center">
-		MUCHOS DERECHOS RESERVADOS
-	</footer>
+	 <footer class="page-footer font-small blue p-3 mb-2 bg-dark text-white">
+
+          <!-- Copyright -->
+          <div class="footer-copyright text-center py-3">© 2018 Copyright:
+            <a href="https://mdbootstrap.com/bootstrap-tutorial/"> MDBootstrap.com</a>
+          </div>
+          <!-- Copyright -->
+
+        </footer>
+        <!-- Footer -->
   </body>
 </html>

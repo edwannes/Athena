@@ -1,14 +1,30 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>AthenaPage</title>
+    <title>ATHENA</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+  	<div class="container">
     <%= yield %>
+    </div>
+     <footer class="page-footer font-small blue p-3 mb-2 bg-dark text-white">
+
+          <!-- Copyright -->
+          <div class="footer-copyright text-center py-3">© 2018 Copyright:
+            <a href="#"> Athena.com</a>
+          </div>
+          <!-- Copyright -->
+
+        </footer>
+        <!-- Footer -->
   </body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
 </html>

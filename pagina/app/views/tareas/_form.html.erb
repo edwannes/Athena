@@ -1,12 +1,14 @@
-
-<%= form_for(@tarea) do |c| %>
-<div class="form-group">
-	<label> Titulo </label>
-	<%= c.text_field :titulo, class: "form-control" %>
+<div class=" form-group">
+	<%= form_for(@tarea) do |c| %>
+	<div class="form-group">
+		<label> Titulo </label>
+		<%= c.text_field :titulo, class: "form-control" %>
+	</div>
+	<div class="form-group">
+		<label> Descripción </label>
+		<%= c.text_area :descripcion, class: "form-control" %>
+	</div>
+	<%= c.submit "Editar", class:"btn btn-success" %>
+	<% end %>
 </div>
-<div class="form-group">
-	<label> Descripción </label>
-	<%= c.text_area :descripcion, class: "form-control" %>
-</div>
-<%= c.submit "Editar", class:"btn btn-success" %>
-<% end %>
+<%=render  "comentario/form" %>

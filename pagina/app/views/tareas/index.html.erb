@@ -1,11 +1,21 @@
-Estas son todas las tareas
+Estas son todas las tareas 
 <ul>
+	
 <% @tareas.each do |v| %>
-	<li>
-	<%= link_to v.titulo,v %>
-	|<%= link_to "Editar",edit_tarea_path(v) %> | 
-	<%= link_to "Eliminar",v, method: :delete ,data: {confirm: "Estas seguro prro?"}%> |</li>
+
+	<li> 
+
+
+		<%= link_to v.titulo,v, :class => "btn btn-dark" %>
+		
+		<%= link_to "Editar",edit_tarea_path(v), :class => "btn btn-dark"  %> 
+		<%= link_to "Eliminar",v, method: :delete ,data: {confirm: "Estas seguro prro?"}, :class => "btn btn-dark" %> 
+       <% unless v.usuario.nil? %>
+		 Por escritorio - <%=v.usuario.email%>
+		 <% end -%>
+   </li>
 	
 <%end%>
+
 </ul>
-<%= link_to "Nueva",new_tarea_path %>
+<%= link_to "Nueva",new_tarea_path, :class => "btn btn-outline-danger"  %>
